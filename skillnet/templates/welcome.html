@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Skillnet</title>
+    <link rel="stylesheet" href="../static/welcome.css" />
+    <link rel="shortcut icon" href="./static/logo.png" type="image/x-icon">
+  </head>
+
+  <nav class="menu">
+      <i class="fas fa-bars"></i>
+    </label>
+    <a href="#"><img class="logo" src="../static/logo-skillnet_1_-removebg-preview.png" alt="Logo"></a>
+    <ul>
+      <li><a href="#">À propos</a></li>
+      <li><a href="#">Services</a></li>
+      <li><a href="#">Contact</a></li>
+      <li><a class="question-number-container" href="#">Accès Pro</a></li>
+    </ul>
+  </nav>
+	</header>
+  <body>
+    <div class="owl"></div>
+    <div class="container-center">
+      <a href="{{url_for('first_page')}}" class="button-62"
+        >Commencer le questionnaire</a
+      >
+    </div>
+
+    <script>
+      const owl = document.querySelector(".owl");
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+
+      function randomPosition() {
+        const offsetX = Math.random() * -1900 + 700;
+        const offsetY = Math.random() * 400 - 400;
+        owl.style.transform = `translate(calc(50% + ${offsetX}px), calc(50% + ${offsetY}px))`;
+      }
+
+      function moveOwl() {
+        setInterval(randomPosition, 3000);
+      }
+
+      moveOwl();
+    </script>
+  </body>
+</html>

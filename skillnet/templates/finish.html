@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Skillnet</title>
+    <link rel="stylesheet" type="text/css" href="./static/finish.css" />
+    <link rel="shortcut icon" href="./static/logo.png" type="image/x-icon">
+  </head>
+  <nav class="menu">
+    <i class="fas fa-bars"></i>
+  </label>
+  <a href="http://127.0.0.1:5000/"><img class="logo" src="../static/logo-skillnet_1_-removebg-preview.png" alt="Logo"></a>
+  <ul>
+    <li><a href="#">À propos</a></li>
+    <li><a href="#">Services</a></li>
+    <li><a href="#">Contact</a></li>
+    <li><a class="question-number-container" href="#">Accès Pro</a></li>
+  </ul>
+</nav>
+  <body>
+    <div class="container-softskills">
+      <h1 class="page-title">Voici vos softkills</h1>
+      <ul>
+        <li class="softskills">{{ reponse0 }}</li>
+        <li class="softskills">{{ reponse1 }}</li>
+      </ul>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", function() {
+        const softskillsItems = document.querySelectorAll('.softskills');
+  
+        softskillsItems.forEach(item => {
+          item.addEventListener('click', function() {
+            const softskillText = this.textContent.trim();
+            const searchQuery = encodeURIComponent(softskillText);
+            const searchUrl = `https://www.google.com/search?q=${searchQuery}`;
+            window.open(searchUrl, '_blank');
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

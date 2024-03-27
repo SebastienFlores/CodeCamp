@@ -1,0 +1,88 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url("https://s1.1zoom.me/b5050/596/Evening_Forests_Mountains_Firewatch_Campo_Santo_549147_1920x1080.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  position: relative;
+}
+
+.question-number-container {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  background-color: #ba37f9;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  margin: 10px;
+  display: flex;
+}
+
+.container {
+  max-width: 600px;
+  width: 100%;
+  padding: 40px;
+  border-radius: 10px;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  position: relative;
+}
+
+.question {
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+input[type="text"] {
+  width: calc(
+    100% - 32px
+  );
+  margin: 0 auto;
+  padding: 15px;
+  margin-top: 10px;
+  border: 2px solid #ba37f9;
+  border-radius: 8px;
+  font-size: 18px;
+  transition: border-color 0.3s ease-in-out;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-color: #8a2be2;
+}
+
+input[type="submit"] {
+  margin-top: 20px;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 8px;
+  background-color: #8a2be2;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+input[type="submit"]:hover {
+  background-color: #6a1a9e;
+}
+
+.owl {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-100%, -50%);
+  width: 280px;
+  height: 280px;
+  background-image: url("https://i.ibb.co/ZVLBs1P/image-removebg-preview-4.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: transform 2.5s ease-in-out;
+}

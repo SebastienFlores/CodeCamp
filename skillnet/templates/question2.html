@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Questionnaire Skillnet</title>
+    <link rel="stylesheet" href="../static/styles.css" />
+    <link rel="stylesheet" href="../static/questions.css" />
+    <link rel="shortcut icon" href="./static/logo.png" type="image/x-icon" />
+  </head>
+  <a href="http://127.0.0.1:5000/"
+    ><img
+      class="logo"
+      src="../static/logo-skillnet_1_-removebg-preview.png"
+      alt="Logo"
+  /></a>
+  <body>
+    <div class="question-number-container">Question 2</div>
+    <div class="owl"></div>
+    <div class="container">
+      <form action="{{url_for('finish_page')}}" method="post">
+        <label for="enter_value" class="question"
+          >Quels sont vos hobbies ?</label
+        ><br />
+        <input type="text" name="enter_value" />
+        <input type="submit" value="Valider" />
+      </form>
+    </div>
+
+    <script>
+      const owl = document.querySelector(".owl");
+      const windowWidth = window.innerWidth;
+      const windowHeight = window.innerHeight;
+
+      function randomPosition() {
+        const offsetX = Math.random() * -1900 + 700;
+        const offsetY = Math.random() * 400 - 400;
+        owl.style.transform = `translate(calc(50% + ${offsetX}px), calc(50% + ${offsetY}px))`;
+      }
+
+      function moveOwl() {
+        setInterval(randomPosition, 3000);
+      }
+
+      moveOwl();
+    </script>
+  </body>
+</html>
